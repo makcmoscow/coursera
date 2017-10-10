@@ -1,6 +1,7 @@
 import tempfile
+import sys
 
-class File():
+class FileWithMagicMethods():
     def __init__(self, path): #инициализируем экземпляр класса.
         self.path = path
         self.file = open(self.path, 'r+')
@@ -31,11 +32,12 @@ class File():
 
 
 
-a = File(r'C:\Users\mkirichenko.M-PR\PycharmProjects\coursera\1.txt')
-b = File(r'C:\Users\mkirichenko.M-PR\PycharmProjects\coursera\2.txt')
+a = FileWithMagicMethods(r'C:\Users\mkirichenko.M-PR\PycharmProjects\coursera\1.txt')
+b = FileWithMagicMethods(r'C:\Users\mkirichenko.M-PR\PycharmProjects\coursera\2.txt')
 c = a+b
 print(c)
 
-for line in File(r'C:\Users\mkirichenko.M-PR\PycharmProjects\coursera\1.txt'):
+for line in FileWithMagicMethods(r'C:\Users\mkirichenko.M-PR\PycharmProjects\coursera\1.txt'):
     print(line)
+
 
